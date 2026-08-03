@@ -11,14 +11,13 @@
 <meta name="author" content="إبراهيم عبيد الزعابي">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://godibrahim-source.github.io/">
-<link rel="alternate" hreflang="ar" href="https://godibrahim-source.github.io/">
-<link rel="alternate" hreflang="en" href="https://godibrahim-source.github.io/#en">
 
 <!-- ===== Open Graph ===== -->
 <meta property="og:type" content="profile">
 <meta property="og:title" content="إبراهيم عبيد الزعابي | باحث قانوني إماراتي">
 <meta property="og:description" content="باحث دكتوراه في القانون الخاص بجامعة الإمارات. أبحاث محكمة في المسؤولية المدنية، تنظيم مهنة المحاماة، والقانون والتقنية.">
 <meta property="og:url" content="https://godibrahim-source.github.io/">
+<meta property="og:image" content="https://godibrahim-source.github.io/portrait-square.jpg">
 <meta property="og:locale" content="ar_AE">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="profile:first_name" content="إبراهيم">
@@ -29,6 +28,7 @@
 <meta name="twitter:title" content="إبراهيم عبيد الزعابي | باحث قانوني إماراتي">
 <meta name="twitter:description" content="باحث دكتوراه في القانون الخاص بجامعة الإمارات. أبحاث في المسؤولية المدنية وتنظيم مهنة المحاماة.">
 <meta name="twitter:site" content="@ibzaabi">
+<meta name="twitter:image" content="https://godibrahim-source.github.io/portrait-square.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,7 +47,7 @@
   "jobTitle": "باحث دكتوراه في القانون الخاص",
   "description": "باحث قانوني إماراتي متخصص في القانون الخاص، والمسؤولية المدنية، وتنظيم مهنة المحاماة، والقانون والتقنية.",
   "url": "https://godibrahim-source.github.io/",
-  "image": "https://godibrahim-source.github.io/assets/portrait.jpg",
+  "image": "https://godibrahim-source.github.io/portrait-square.jpg",
   "nationality": {"@type": "Country", "name": "United Arab Emirates"},
   "knowsLanguage": ["ar", "en"],
   "email": "mailto:ibzaabi@hotmail.com",
@@ -166,6 +166,13 @@ header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 8
 .hero:before{content:"";position:absolute;inset:0;
   background:radial-gradient(1200px 400px at 90% -10%,color-mix(in srgb,var(--brand-2) 14%,transparent),transparent 70%);z-index:0}
 .hero .wrap{position:relative;z-index:1}
+.hero-grid{display:grid;grid-template-columns:1.4fr .9fr;gap:40px;align-items:center}
+.hero-portrait{justify-self:center}
+.hero-portrait img{width:min(320px,72vw);aspect-ratio:3/4;object-fit:cover;border-radius:20px;
+  border:5px solid var(--surface);box-shadow:var(--shadow);display:block}
+@media(max-width:760px){.hero-grid{grid-template-columns:1fr;gap:26px}
+  .hero-portrait{order:-1}
+  .hero-portrait img{width:min(220px,60vw)}}
 .eyebrow{color:var(--brand-2);font-weight:700;letter-spacing:.5px;margin-bottom:14px}
 .hero h1{font-size:clamp(34px,6vw,56px);line-height:1.2;color:var(--brand);font-weight:800;margin-bottom:8px}
 .hero .en-name{font-size:20px;color:var(--muted);font-weight:500;direction:ltr;text-align:right;margin-bottom:20px}
@@ -252,17 +259,22 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 
 <!-- HERO -->
 <div class="hero">
-  <div class="wrap">
-    <div class="eyebrow">باحث قانوني · القانون الخاص</div>
-    <h1 class="serif">إبراهيم عبيد الزعابي</h1>
-    <div class="en-name">Ibrahim Obaid Al-Zaabi</div>
-    <p class="lead">باحث دكتوراه في القانون الخاص بجامعة الإمارات العربية المتحدة. تتركز أبحاثي في المسؤولية المدنية، وتنظيم مهنة المحاماة، والمسائل القانونية الناشئة عن التقنيات الحديثة.</p>
-    <div class="cta">
-      <a class="btn btn-primary" href="#publications">استعرض الأبحاث</a>
-      <a class="btn btn-ghost" href="https://orcid.org/0009-0000-1577-1455" target="_blank" rel="noopener">
-        <svg width="16" height="16" viewBox="0 0 256 256" fill="#A6CE39"><circle cx="128" cy="128" r="128"/><path fill="#fff" d="M86 186h-18V94h18v92zM77 70a11 11 0 110 22 11 11 0 010-22zm40 24h17v12h.3c2.4-4.5 8.3-9.3 17-9.3 18 0 21 12 21 27v55h-18v-49c0-12-4-16-11-16-8 0-13 5-13 16v49h-18V94z"/></svg>
-        ORCID
-      </a>
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <div class="eyebrow">باحث قانوني · القانون الخاص</div>
+      <h1 class="serif">إبراهيم عبيد الزعابي</h1>
+      <div class="en-name">Ibrahim Obaid Al-Zaabi</div>
+      <p class="lead">باحث دكتوراه في القانون الخاص بجامعة الإمارات العربية المتحدة. تتركز أبحاثي في المسؤولية المدنية، وتنظيم مهنة المحاماة، والمسائل القانونية الناشئة عن التقنيات الحديثة.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#publications">استعرض الأبحاث</a>
+        <a class="btn btn-ghost" href="https://orcid.org/0009-0000-1577-1455" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 256 256" fill="#A6CE39"><circle cx="128" cy="128" r="128"/><path fill="#fff" d="M86 186h-18V94h18v92zM77 70a11 11 0 110 22 11 11 0 010-22zm40 24h17v12h.3c2.4-4.5 8.3-9.3 17-9.3 18 0 21 12 21 27v55h-18v-49c0-12-4-16-11-16-8 0-13 5-13 16v49h-18V94z"/></svg>
+          ORCID
+        </a>
+      </div>
+    </div>
+    <div class="hero-portrait">
+      <img src="portrait.jpg" alt="إبراهيم عبيد الزعابي — باحث قانوني في القانون الخاص" width="320" height="427" loading="eager">
     </div>
   </div>
 </div>
