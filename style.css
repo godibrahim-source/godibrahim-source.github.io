@@ -1,0 +1,92 @@
+/* ============================================================
+   إبراهيم عبيد الزعابي — أنماط مشتركة (shared styles)
+   تُستخدم في صفحات الأبحاث والكتاب لتطابق تصميم الصفحة الرئيسية.
+   ============================================================ */
+:root{
+  --bg:#f7f5f0; --surface:#ffffff; --ink:#1a2332; --muted:#5a6472;
+  --brand:#0e3a53; --brand-2:#1f7a8c; --gold:#b0894c;
+  --line:#e6e1d8; --shadow:0 10px 40px rgba(14,58,83,.08);
+}
+[data-theme="dark"]{
+  --bg:#0f1720; --surface:#16212e; --ink:#e8edf2; --muted:#9aa7b5;
+  --brand:#7fc4d6; --brand-2:#4aa3b8; --gold:#d4b876; --line:#25323f;
+  --shadow:0 10px 40px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Tajawal',system-ui,sans-serif;background:var(--bg);color:var(--ink);
+  line-height:1.85;font-size:17px;transition:background .3s,color .3s;
+}
+.serif{font-family:'Amiri',serif}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:800;font-size:18px;color:var(--brand)}
+.nav ul{display:flex;gap:22px;list-style:none;align-items:center}
+.nav ul a{color:var(--ink);font-weight:500;font-size:15px}
+.nav ul a:hover{color:var(--brand-2);text-decoration:none}
+.toggle{background:var(--surface);border:1px solid var(--line);border-radius:999px;
+  width:40px;height:40px;cursor:pointer;font-size:17px;color:var(--ink)}
+
+/* Breadcrumb */
+.breadcrumb{font-size:13.5px;color:var(--muted);padding:18px 0 0}
+.breadcrumb a{color:var(--brand-2)}
+.breadcrumb span{margin:0 6px;color:var(--line)}
+
+/* Article */
+.article{padding:26px 0 64px}
+.article .kicker{color:var(--brand-2);font-weight:700;letter-spacing:.5px;margin:16px 0 10px}
+.article h1{font-size:clamp(26px,4.6vw,40px);line-height:1.3;color:var(--brand);font-weight:800;margin-bottom:12px}
+.article .en-title{direction:ltr;text-align:right;color:var(--muted);font-size:16px;margin-bottom:16px}
+.article .meta{color:var(--muted);font-size:14.5px;margin-bottom:22px;
+  border-inline-start:3px solid var(--brand-2);padding-inline-start:14px}
+.article h2{font-size:clamp(20px,3vw,26px);color:var(--brand);font-weight:800;margin:34px 0 12px}
+.article h3{font-size:18px;color:var(--brand);font-weight:700;margin:22px 0 8px}
+.article p{margin-bottom:16px}
+.article ul,.article ol{margin:0 0 16px;padding-inline-start:24px}
+.article li{margin-bottom:8px}
+.lead{font-size:19px;color:var(--muted);margin-bottom:24px}
+
+/* Tags + chips */
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 22px}
+.tag{font-size:12.5px;color:var(--muted);background:var(--surface);border:1px solid var(--line);
+  padding:4px 12px;border-radius:999px}
+
+/* Link buttons */
+.links{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 26px}
+.links a,.links button{font-size:13.5px;font-weight:600;padding:9px 16px;border-radius:10px;
+  border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;transition:.15s}
+.links a:hover,.links button:hover{border-color:var(--brand-2);color:var(--brand-2);text-decoration:none}
+.links .primary{background:var(--brand);color:#fff;border-color:var(--brand)}
+.links .primary:hover{color:#fff;opacity:.92}
+
+/* Info card */
+.infocard{background:var(--surface);border:1px solid var(--line);border-radius:16px;
+  padding:22px 24px;box-shadow:var(--shadow);margin:22px 0}
+.infocard .row{display:flex;justify-content:space-between;gap:14px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:15px}
+.infocard .row:last-child{border-bottom:0}
+.infocard .row .k{color:var(--muted)}
+.infocard .row .v{font-weight:600;color:var(--ink);text-align:end}
+
+/* Citation block */
+.cite-block{background:var(--surface);border:1px solid var(--line);border-radius:12px;
+  padding:16px 18px;font-size:14.5px;color:var(--ink);margin:10px 0 6px;line-height:1.9;direction:rtl}
+
+/* Related cards */
+.related{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:16px}
+.rcard{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;transition:transform .15s}
+.rcard:hover{transform:translateY(-3px)}
+.rcard .k{font-size:12.5px;color:var(--brand-2);font-weight:700;margin-bottom:6px}
+.rcard .t{font-weight:700;color:var(--brand);font-size:15.5px;line-height:1.6}
+
+footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:var(--muted);font-size:14px}
+#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(120px);
+  background:var(--brand);color:#fff;padding:12px 24px;border-radius:12px;transition:transform .3s;z-index:99}
+#toast.show{transform:translateX(-50%) translateY(0)}
+@media(max-width:720px){.nav ul{display:none}}
