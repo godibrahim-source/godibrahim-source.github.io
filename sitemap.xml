@@ -2,32 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://godibrahim-source.github.io/</loc>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://godibrahim-source.github.io/research.html</loc>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://godibrahim-source.github.io/research-lawyer-qualification-uae.html</loc>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://godibrahim-source.github.io/research-smart-vehicles-civil-liability.html</loc>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://godibrahim-source.github.io/book-dukan-amoh.html</loc>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://godibrahim-source.github.io/pdf/ijrsp-v7-75-7.pdf</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://godibrahim-source.github.io/pdf/ijrsp-v5-55-4.pdf</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
